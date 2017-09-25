@@ -1,0 +1,123 @@
+'1506073345772':
+  alias: Chien Mechant
+  sequence:
+  - alias: turn on jamjoum
+    data:
+      entity_id: media_player.living_room_home
+    service: media_player.turn_on
+  - alias: set jamjoum volume
+    data:
+      entity_id: media_player.living_room_home
+      volume_level: 0.9
+    service: media_player.volume_set
+  - alias: play dog bark on jamjoum
+    data:
+      entity_id: media_player.living_room_home
+      media_content_id: https://raw.githubusercontent.com/CCOSTAN/Home-AssistantConfig/master/sounds/dog-barking-2-bullmastiff.mp3
+      media_content_type: audio/mp4
+    service: media_player.play_media
+'1506076464746':
+  alias: Ouvrir Volet Sejour-1
+  sequence:
+  - condition: state
+    entity_id: cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+    state: closed
+  - alias: ouvir sejour1
+    data:
+      entity_id: cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+    service: cover.open_cover
+'1506083788350':
+  alias: Fermer Volet Sejour-1
+  sequence:
+  - condition: state
+    entity_id: cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+    state: open
+  - alias: Fermer Voler Sejour-1
+    data:
+      entity_id: cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+    service: cover.close_cover
+'1506083981531':
+  alias: Arm Arlo
+  sequence:
+  - alias: Arm Arlo
+    data:
+      entity_id: camera.sejour
+    service: camera.enable_motion_detection
+'1506084228923':
+  alias: Disarm Arlo
+  sequence:
+  - alias: Disarm Arlo
+    data:
+      entity_id: camera.sejour
+    service: camera.disable_motion_detection
+'1506324848156':
+  alias: Ouverture Partielle Volet Sejour-1
+  sequence:
+  - alias: volet-sejour1-ouverture-partielle
+    data:
+      entity_id: cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+      position: 50
+    service: cover.set_cover_position
+'1506326220040':
+  alias: MyFox Alarm Night Mode
+  sequence:
+  - alias: Alarm Night
+    data:
+      event: ALARM_NIGHT
+    service: ifttt.trigger
+'1506326593748':
+  alias: Disarm MyFox Alarm
+  sequence:
+  - alias: Alarm Off
+    data:
+      event: ALARM_OFF
+    service: ifttt.trigger
+'1506326671487':
+  alias: Arm MyFox Alarm
+  sequence:
+  - alias: Alarm On
+    data:
+      event: ALARM_ON
+    service: ifttt.trigger
+'1506330043407':
+  alias: Away Mode
+  sequence:
+  - delay: 00:01:00
+  - alias: set alarm on
+    service: script.1506326671487
+  - alias: arm arlo
+    data: {}
+    service: script.1506083981531
+  - alias: lights off
+    data:
+      entity_id: group.all_lights
+    service: light.turn_off
+  - alias: light salle a manger off
+    data:
+      entity_id: switch.salle_a_manger
+    service: switch.turn_off
+'1506330983266':
+  alias: Home Mode
+  sequence:
+  - alias: disarm myfox
+    data: {}
+    service: script.1506326593748
+  - alias: disarm arlo
+    data: {}
+    service: script.1506084228923
+'1506331473419':
+  alias: Night Mode
+  sequence:
+  - delay: 00:01:00
+  - alias: set alarm to night mode
+    service: script.1506326220040
+  - alias: 'arm arlo '
+    service: script.1506083981531
+  - alias: lights off
+    data:
+      entity_id: group.all_lights
+    service: light.turn_off
+  - alias: light salle a manger off
+    data:
+      entity_id: switch.salle_a_manger
+    service: switch.turn_off

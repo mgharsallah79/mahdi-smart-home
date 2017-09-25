@@ -1,0 +1,49 @@
+zwave._:
+  hidden: true
+sensor.fibaro_system_fgrm222_roller_shutter_controller_2_unknown:
+  hidden: true
+sensor.hallway_thermostat_hvac_state:
+  hidden: true
+binary_sensor.hallway_thermostat_is_using_emergency_heat:
+  hidden: true
+sensor.fibaro_system_fgrm222_roller_shutter_controller_2_exporting:
+  hidden: true
+sensor.fibaro_system_fgrm222_roller_shutter_controller_2_power:
+  hidden: true
+sensor.fibaro_system_fgrm222_roller_shutter_controller_2_power_2:
+  hidden: true
+binary_sensor.hallway_thermostat_is_locked:
+  hidden: true
+binary_sensor.hallway_thermostat_fan:
+  hidden: true
+sensor.mahdis_ipad_battery_state:
+  hidden: true
+cover.switch:
+  hidden: true
+switch.switch:
+  hidden: true
+sensor.iphone_battery_state:
+  hidden: true
+sensor.fibaro_system_fgrm222_roller_shutter_controller_2_energy:
+  hidden: true
+cover.fibaro_system_fgrm222_roller_shutter_controller_2_level:
+  friendly_name: Sejour-1
+device_tracker.mahdiphone:
+  friendly_name: Mahdi
+  entity_picture: /local/Mahdi.jpg
+device_tracker.portableanouk:
+  friendly_name: Anouk
+  entity_picture: /local/Anouk.jpg
+media_player.living_room_home:
+  friendly_name: jamjoum
+script.1506073345772:
+  icon: mdi:alert-octagram
+script.1506084228923: {}
+script.1506083788350: {}
+script.1506083981531: {}
+script.1506076464746: {}
+script.1506324848156: {}
+script.1506326671487: {}
+script.1506326220040: {}
+script.1506326593748: {}
+group.security_modes: {}

@@ -1,0 +1,37 @@
+Arlo Camera:
+ - sensor.captured_today_sejour
+ - sensor.last_sejour
+Ring Doorbell:
+ - sensor.ring_front_door_last_activity
+ - sensor.ring_front_door_last_ding
+ - sensor.ring_front_door_last_motion
+ - binary_sensor.ring_front_door_ding
+ - binary_sensor.ring_front_door_motion
+Media Players:
+ - media_player.jamjoum
+ - media_player.samsung_6_series_65_ue65ku6100
+Nest Thermostat:
+ - binary_sensor.hallway_thermostat_has_leaf
+#- binary_sensor.hallway_thermostat_is_locked
+ - binary_sensor.hallway_thermostat_online
+ - sensor.hallway_thermostat_humidity
+ #- sensor.hallway_thermostat_hvac_state
+ - sensor.hallway_thermostat_operation_mode
+ - sensor.hallway_thermostat_target
+ - sensor.hallway_thermostat_temperature
+Nest Protect:
+ - binary_sensor.hallway_nest_protect_online
+ - sensor.hallway_nest_protect_battery_health
+ - sensor.hallway_nest_protect_co_status
+ - sensor.hallway_nest_protect_smoke_status
+iDevices:
+ - sensor.iphone_battery_level
+ - sensor.iphone_battery_state
+ - sensor.mahdis_ipad_battery_level
+ - sensor.mahdis_ipad_battery_state
+Shutter Rollers:
+ - cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+Security Modes:
+ - script.1506330043407
+ - script.1506330983266
+ - script.1506331473419  

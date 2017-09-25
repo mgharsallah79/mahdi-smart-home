@@ -1,0 +1,3 @@
+sensor.fibaro_system_fgrm222_roller_shutter_controller_2_power:
+  ignored: false
+  polling_intensity: 1
