@@ -26,3 +26,5 @@ nest.conf
 .uuid
 ipchange.yaml
 home-assistant_v2.db-shm
+.HA_VERSION
+.DS_Store
