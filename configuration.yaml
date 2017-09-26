@@ -58,8 +58,8 @@ camera: !include camera.yaml
 
 http:
   api_password: !secret hassio_password
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
   base_url: !secret hassio_base_url
   #login_attempts_threshold: 3
 
