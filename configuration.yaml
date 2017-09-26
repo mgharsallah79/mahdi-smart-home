@@ -34,9 +34,9 @@ device_tracker:
     consider_home: 0:03
     waypoints: True
     waypoint_whitelist:
-      - pn
+      - madphone
+      - anoukdroid
     #track_new_devices: no
-
 mqtt:
     broker: !secret mqtt_broker
     port: !secret mqtt_port
@@ -107,3 +107,4 @@ group: !include groups.yaml
 automation: !include automations.yaml
 #script: !include_dir_merge_named script
 script: !include scripts.yaml
+input_boolean: !include_dir_merge_named input_booleans
