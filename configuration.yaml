@@ -29,7 +29,21 @@ device_tracker:
       - 10.0.0.8
       - 10.0.0.15
     interval_seconds: 30
+  - platform: owntracks
+    track_new_devices: yes
+    consider_home: 0:03
+    waypoints: True
+    waypoint_whitelist:
+      - pn
     #track_new_devices: no
+
+mqtt:
+    broker: !secret mqtt_broker
+    port: !secret mqtt_port
+    keepalive: 60
+    client_id: !secret mqtt_client_id
+    username: !secret mqtt_username
+    password: !secret cloudmqtt_HA_password
 
 hassio:
 
