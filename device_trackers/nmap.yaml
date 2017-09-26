@@ -1,4 +1,0 @@
-  - platform: nmap_tracker
-    hosts: 10.0.0.1/24
-    track_new_devices: no
-    
