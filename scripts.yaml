@@ -40,6 +40,11 @@
     data:
       entity_id: camera.sejour
     service: camera.enable_motion_detection
+  - alias: notify ios devices
+    data:
+      message: arlo has been armed
+      title: Hassio-Arlo
+    service: notify.ios_iphone_mahdi
 '1506084228923':
   alias: Disarm Arlo
   sequence:
@@ -47,6 +52,11 @@
     data:
       entity_id: camera.sejour
     service: camera.disable_motion_detection
+  - alias: arlo disarmed
+    data:
+      message: arlo has been diarmed
+      title: Hassio-Arlo
+    service: notify.ios_iphone_mahdi
 '1506324848156':
   alias: Ouverture Partielle Volet Sejour-1
   sequence:
@@ -69,6 +79,11 @@
     data:
       event: ALARM_OFF
     service: ifttt.trigger
+  - alias: MyFox disarmed
+    data:
+      message: Myfox alarm has been diarmed
+      title: Hassio-Myfox
+    service: notify.ios_iphone_mahdi
 '1506326671487':
   alias: Arm MyFox Alarm
   sequence:
@@ -76,6 +91,11 @@
     data:
       event: ALARM_ON
     service: ifttt.trigger
+  - alias: Myfox is armed
+    data:
+      message: Myfox has been armed
+      title: Hassio-Myfox
+    service: notify.ios_iphone_mahdi
 '1506330043407':
   alias: Away Mode
   sequence:
@@ -93,6 +113,11 @@
     data:
       entity_id: switch.salle_a_manger
     service: switch.turn_off
+  - alias: away mode on
+    data:
+      message: Away Mode is now activated
+      title: Hassio-Away mode
+    service: notify.ios_iphone_mahdi
 '1506330983266':
   alias: Home Mode
   sequence:
@@ -102,6 +127,11 @@
   - alias: disarm arlo
     data: {}
     service: script.1506084228923
+  - alias: home mode on
+    data:
+      message: Home mode is now activated
+      title: Hassio-Home Mode
+    service: notify.ios_iphone_mahdi
 '1506331473419':
   alias: Night Mode
   sequence:
@@ -118,3 +148,8 @@
     data:
       entity_id: switch.salle_a_manger
     service: switch.turn_off
+  - alias: night mode on
+    data:
+      message: Night Mode is now activated
+      title: Hassio-Night Mode
+    service: notify.ios_iphone_mahdi
