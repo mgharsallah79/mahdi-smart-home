@@ -25,17 +25,17 @@ config:
 #device_tracker: !include_dir_merge_list device_trackers
 device_tracker:
   - platform: nmap_tracker
-    hosts: #!secret nmap_tracker_ip
-      - 10.0.0.8
-      - 10.0.0.15
+    hosts:
+      - !secret nmap_tracker_ip_1
+      - !secret nmap_tracker_ip_2
     interval_seconds: 30
   - platform: owntracks
     track_new_devices: yes
     consider_home: 0:03
     waypoints: True
     waypoint_whitelist:
-      - madphone
-      - anoukdroid
+      - MG
+      - AJ
     #track_new_devices: no
 mqtt:
     broker: !secret mqtt_broker
@@ -108,3 +108,4 @@ automation: !include automations.yaml
 #script: !include_dir_merge_named script
 script: !include scripts.yaml
 input_boolean: !include_dir_merge_named input_booleans
+zone: !include zones.yaml

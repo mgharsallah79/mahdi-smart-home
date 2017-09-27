@@ -19,9 +19,6 @@
 '1506076464746':
   alias: Ouvrir Volet Sejour-1
   sequence:
-  - condition: state
-    entity_id: cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
-    state: closed
   - alias: ouvir sejour1
     data:
       entity_id: cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
