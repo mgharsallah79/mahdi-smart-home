@@ -47,7 +47,7 @@ mqtt:
 
 hassio:
 
-#ios:
+ios:
 
 switch:
   - platform: tplink
